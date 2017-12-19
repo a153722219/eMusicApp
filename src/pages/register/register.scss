@@ -1,0 +1,28 @@
+
+
+page-register  {
+  background-image: url("../assets/img/bg.jpg");
+  background-size: 100% auto;
+}
+page-register  .content{
+  background-color: rgba(0,0,0,0)!important;
+}
+
+page-register  ion-list{
+  padding: 0 30px;
+  padding-top: 20rem;
+}
+page-register  ion-item{
+  margin-bottom: 15px!important;
+}
+page-register  ion-list button{
+  width: 45%;
+}
+page-register  ion-list button[color="primary"]{
+  float: right;
+}
+
+.logintitle .toolbar-background{
+  background: rgba(0,0,0,0)!important;
+  color: black!important;
+}

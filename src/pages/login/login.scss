@@ -1,0 +1,26 @@
+page-login {
+  background-image: url("../assets/img/bg.jpg");
+  background-size: 100% auto;
+}
+page-login .content{
+  background-color: rgba(0,0,0,0)!important;
+}
+
+page-login ion-list{
+  padding: 0 30px;
+  padding-top: 20rem;
+}
+page-login ion-item{
+  margin-bottom: 15px!important;
+}
+page-login ion-list button{
+ width: 45%;
+}
+page-login ion-list button[color="primary"]{
+float: right;
+}
+
+.logintitle .toolbar-background{
+  background: rgba(0,0,0,0)!important;
+  color: black!important;
+}

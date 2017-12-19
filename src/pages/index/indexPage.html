@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <button class="text-white" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>简听音乐</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-searchbar  (keyup.enter)="onEnter($event)" class="gl-bg" placeholder="输入歌手/歌曲关键字"></ion-searchbar>
+  <!--(ionInput)="getItems($event)"-->
+  <ion-list>
+    <!--<ion-item *ngFor="let item of items">-->
+    <!--{{ item }}-->
+    <!--</ion-item>-->
+  </ion-list>
+
+  <div text-center (click)="showLogin()">
+    <img src="assets/img/avatar.jpg" class="oAvatar" alt="">
+    <span>— {{comm.uname}} —</span>
+  </div>
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="music-item" text-center (click)="openCloudPage()">
+            <ion-icon name="md-cloud-done" class="oIcon" ></ion-icon>
+            <p class="pname">云端歌曲</p>
+            <p class="pcount">{{this.comm.count}}</p>
+          </div>
+        </ion-col>
+          <ion-col>
+              <div class="music-item" text-center (click)="openLocalPage()">
+                  <ion-icon name="ios-musical-notes" class="oIcon" ></ion-icon>
+                  <p class="pname">本地歌曲</p>
+                  <p class="pcount">50</p>
+              </div>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="music-item" text-center (click)="openFavPage()">
+            <ion-icon name="ios-heart-outline" class="oIcon" ></ion-icon>
+            <p class="pname">我喜欢</p>
+            <p class="pcount">45</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="music-item" text-center (click)="openShopPage()">
+            <ion-icon name="md-ionic" class="oIcon" ></ion-icon>
+            <p class="pname">已购音乐</p>
+            <p class="pcount">0</p>
+          </div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+  <hr>
+
+<ion-list>
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="assets/img/avatar.jpg" width="50" alt="">
+    </ion-thumbnail>
+    <h2>个性电台</h2>
+    <p>偶遇身边好歌曲</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="assets/img/avatar.jpg" width="50" alt="">
+    </ion-thumbnail>
+    <h2>跑步电台</h2>
+    <p>简听音乐 x NIKE 让运动乐在其中</p>
+  </ion-item>
+
+
+</ion-list>
+
+
+</ion-content>
+

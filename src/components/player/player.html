@@ -1,0 +1,17 @@
+<!-- Generated template for the PlayerComponent component -->
+<div>
+      <ion-item class="bPlayer">
+        <ion-thumbnail item-start>
+          <img [src]="music.img" (click)="openDetail()"  class="bImg" [ngClass]="{playing:music.isPlaying}" alt="">
+        </ion-thumbnail>
+        <h2 class="nametitile">{{music.song_name}}</h2>
+        <p class="nametitile">{{music.author_name}}</p>
+          <div class="pControl" *ngIf="!music.isPlaying" (click)="music.plays()">
+            <ion-icon name="ios-play"></ion-icon>
+          </div>
+          <div class="pControl" *ngIf="music.isPlaying" (click)="music.pause()">
+            <ion-icon name="ios-pause"></ion-icon>
+          </div>
+        <div class="bProgress" [ngStyle]="{'width': music.progress+'%'}"></div>
+      </ion-item>
+</div>

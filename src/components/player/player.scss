@@ -1,0 +1,64 @@
+player {
+    border-top: 1px #ccc solid;
+}
+.pControl{
+  position: absolute;
+  right: 10px;
+  top: 1.25rem;
+  height:2.8rem;
+  width: 2.8rem;
+  text-align: center;
+  line-height: 2.5rem;
+  border-radius: 50%;
+  color:color($colors,grendle);
+  border: 3px solid color($colors,grendle);
+}
+,.pControl ion-icon[name="ios-play"]{
+    position: relative;
+    left: 1px;
+ }
+.bProgress{
+  border-top:3px solid color($colors,grendle);
+  width: 45%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+ion-label{
+  overflow: initial;
+}
+
+.bPlayer{
+  padding-left: 5px;
+  position: relative!important;
+}
+
+.bPlayer ion-thumbnail{
+  min-width: 0;
+  min-height: 0;
+  margin: 2px!important;
+  margin-right: 8px!important;
+}
+.bPlayer .bImg{
+  border-radius: 50%;
+  height: 4.5rem!important;
+  width: 4.5rem!important;
+  vertical-align: middle;
+  margin: 3px!important;
+}
+.bPlayer .label{
+  margin: 0;
+}
+.playing{
+  animation: Imgrotate 15s linear infinite;
+}
+@keyframes Imgrotate {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(359deg);
+  }
+}
+

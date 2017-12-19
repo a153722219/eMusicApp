@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let tmp of list;let i = index;">
+      <ion-item>
+          <h2 [innerHTML]="tmp.FileName"></h2>
+          <h4 [innerHTML]="tmp.SingerName"></h4>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button (click)="play(i)">播放</button>
+        <button ion-button color="secondary" (click)="download()">下载</button>
+        <button ion-button color="danger" (click)="sub(i)">收藏</button>
+
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onScroll($event)">
+    <ion-infinite-scroll-content loadingSpinner="dots" loadingText="正在加载更多">
+
+    </ion-infinite-scroll-content>
+
+  </ion-infinite-scroll>
+
+</ion-content>

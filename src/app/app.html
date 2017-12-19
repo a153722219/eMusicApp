@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar  class="gl-bg">
+      <ion-title>简听音乐</ion-title>
+
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-list>
+      <ion-item class="gl-bg">
+        <img src="assets/img/avatar.jpg" class="avatar" alt="">
+        <p class="uname text-center text-white">{{comm.uname}}</p>
+      </ion-item>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<ion-footer>
+  <player></player>
+</ion-footer>

@@ -1,0 +1,35 @@
+page-hello-ionic {
+
+}
+.oAvatar{
+  width:20%;
+  margin: 0 40%;
+  border-radius: 50%;
+  border: none;
+}
+.searchbar-input{
+  padding-top: 0!important;
+  padding-bottom:0!important;
+  box-shadow: none!important;
+  border-radius: 5px!important;
+}
+.oIcon{
+  font-size: 3.5rem;
+  color: color($colors,grendle);
+}
+
+.music-item p{
+  margin: 5px 0;
+}
+.searchbar-search-icon{
+  top: 9px!important;
+}
+.music-item .pname{
+  font-size: 1.45rem;
+  color: black;
+}
+
+.music-item .pcount{
+  font-size: 0.8rem;
+  color: #333;
+}
